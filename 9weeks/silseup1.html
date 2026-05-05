@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .green-box {
+            background-color: green;
+        }
+        .container {
+            display: flex;
+        }
+        .red-box {
+            background-color: red;
+            width: 30%;
+        }
+        .blue-box {
+            background-color: blue;
+            width: 70%;
+        }
+        .white-box {
+            background-color: white;
+            border: 5px solid black;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 50px;
+            padding: 50px 0;
+        }
+        .circle {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid black;
+            box-sizing: border-box;
+        }
+        .circle.red { background-color: red; }
+        .circle.green { background-color: green; }
+        .circle.blue { background-color: blue; }
+        .circle.yellow { background-color: yellow; }
+        .purple-box {
+            background-color: purple;
+        }
+        .orange-box {
+            position: absolute;
+            background-color: orange;
+            width: 200px;
+            height: 150px;
+            left: 50%;
+            top: 50px;
+            transform: translateX(-50%);
+        }
+        .white-box > div {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="green-box">
+        Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet Lorem dolor sit amet ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="container">
+        <div class="red-box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="blue-box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            <div class="white-box">
+                <div><div class="circle red"></div></div>
+                <div><div class="circle green"></div></div>
+                <div><div class="circle blue"></div></div>
+                <div><div class="circle yellow"></div></div>
+            </div>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+    <div class="purple-box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="orange-box">
+        요소의 중앙 배...
+    </div>
 </body>
 </html>
