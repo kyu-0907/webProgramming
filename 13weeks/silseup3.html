@@ -1,68 +1,32 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13주차 실습 3</title>
-    <style>
-        /* Modern, clean style reset and basic layout */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-        }
-        .container {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        p {
-            color: #7f8c8d;
-            line-height: 1.6;
-        }
-        .btn {
-            background-color: #e74c3c;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .btn:hover {
-            background-color: #c0392b;
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body>
-    <div class="container">
-        <h1>13주차 실습 3</h1>
-        <p>이곳에 실습 내용을 작성하세요.</p>
-        <button class="btn" id="btn-action">클릭하세요</button>
-    </div>
-
-    <script>
-        // JavaScript 코드를 작성하세요.
-        document.getElementById('btn-action').addEventListener('click', () => {
-            alert('버튼이 클릭되었습니다!');
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<script>
+    $(document).ready(function () {
+        // 문서 객체를 추가합니다.
+        let output = '';
+        for (let i = 0; i < 256; i++) {
+            output += '<div></div>';
+        }
+        document.body.innerHTML = output;
+        // 스타일을 적용합니다.
+        $('div').css({
+            height: 2,
+            backgroundColor: function (i) {
+                return 'rgb(' + i + ',' + i + ',' + i + ')';
+            }
         });
-    </script>
+    });
+</script>
+
+<body>
+
 </body>
+
 </html>
