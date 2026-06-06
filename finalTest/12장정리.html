@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 입력양식 포커스-->
+    <script>
+        window.onload = function () {
+            let input_1 = document.querySelector('input')[0];
+            let input_2 = document.querySelector('input')[1];
+
+            input_1.onkeyup = function () {
+                if (6 <= input_1.value.length) {
+                    input_2.focus();
+                }
+            };
+
+            input_2.onkeydown = function () {
+                eventObj = event || window.event;
+                if (eventObj.keyCode == 8 && input_2.value.length == 0) {
+                    input_1.focus();
+                }
+
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <input type="text" maxlength="6">
+    <span>-</span>
+    <input type="text" amxlength="7">
+
+</body>
+
+</html>
+
+
+
+<!-- 프레임 애니메이션-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
