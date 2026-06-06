@@ -5,27 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script>
-        $document.ready(function () {
+        $(document).ready(function () {
             let src = $('script').attr('src');
 
             alert(src);
 
         });
     </script>
-    // 속성값 입력으로 속성조작 시작
+    <!--속성값 입력으로 속성조작 시작 -->
     <script>
-        $document.ready(function () {
+        $(document).ready(function () {
             $('img').attr('alt', 'jQuery 라이브러리');
             $('img').attr('src', 'http://www.dummyimage.com/100x100');
             $('img').attr('width', 100);
         });
     </script>
-    //객체 입력으로 속성 조작하기
+    <!--객체 입력으로 속성조작-->
+
     <script>
+        $(document).ready(function () {
+            $('img').attr({
+                alt: 'jQuery 라이브러리',
+                src: 'http://www.dummyimage.com/100x100',
+                width: 100
+
+            })
+        });
 
     </script>
+    <!--함수로 속성 조작하기-->
+    <script>
+        $(document).ready(function () {
+            $('img').attr({
+                alt: 'jQeury 라이브러리',
+                src: function (index) {
+                    let size = (index + 0) * 100;
+
+                    return 'http://www.dummyimage.com/' + size + 'x100';
+                }
+            })
+        })
+    </script>
+    <!--스타일 조작하기 - 속성 입력하기-->
+    <script>
+        $(document).ready(function () {
+            $('.box').css('float', 'left');
+            $('.box').css('margin', 10);
+        }
+        );
+    </script>
+    <!--스타일 조작 - 객체 입력하기-->
+    <script>
+        $(document).ready(function () {
+            $('.box').css({
+                float: 'left',
+                margin: 10
+            });
+
+        });
+    </script>
+    <!--스타일 조작 - 함수 지정하여 스타일 조작하기-->
+    <script>
+        $(document).ready(function () {
+            let output = '';
+            for (let i = 0; i < 256; i++) {
+                output += '<div></div>';
+            }
+
+            document.body.innerHTML = output;
+
+            $('div').css({
+                height: 2,
+                backgroundColor: function (i) {
+                    return 'rgb(' + i + ',' + i + ',' + i + ')';
+                }
+            });
+
+
+            //window.onload = function()
+
+            /*/ 문서 객체를 선택합니다.
+            let divs = document.querySelectorAll('div');
+            for (let i = 0; i < divs.length; i++) {
+                // 변수를 선언합니다.
+                let div = divs[i];
+                // 스타일을 적용합니다.
+                div.style.height = '2px’;
+                div.style.background = 'rgb(' + i + ',' + i + ',' + i + ‘)’;
+                */
+        });
+
+    </script>
+
 
 </head>
 
@@ -33,6 +106,13 @@
     <img></img>
     <img></img>
     <img></img>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+
 </body>
 
 </html>
